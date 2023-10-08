@@ -1,9 +1,16 @@
-import HeroSection from '@/components/landing/hero-section';
+import dynamic from 'next/dynamic';
+
+const DynamicHeroSection = dynamic(
+  () => import('@/components/landing/hero-section'),
+  {
+    ssr: false,
+  }
+);
 
 export default function LandingPage() {
   return (
     <main>
-      <HeroSection />
+      <DynamicHeroSection />
     </main>
   );
 }
