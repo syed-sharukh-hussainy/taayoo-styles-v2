@@ -19,11 +19,11 @@ const Navbar = () => {
       );
     } else {
       return (
-        <div className="hidden md:flex items-center gap-3">
+        <section className="hidden md:flex items-center gap-3">
           {/* <ThemesSheet /> */}
           {/* <ExportToImage /> */}
           {/* <ShareImage /> */}
-        </div>
+        </section>
       );
     }
   }, [pathName]);
@@ -33,7 +33,7 @@ const Navbar = () => {
       <nav className="w-full h-14 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-3">
           <TaaYooLogo />
-          <p className="hidden md:flex font-black text-xl">TaaYoo</p>
+          <span className="hidden md:flex font-black text-xl">TaaYoo</span>
         </Link>
         <div className="flex items-center gap-3">
           {NavButtons}
