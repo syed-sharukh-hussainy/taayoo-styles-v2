@@ -3,11 +3,11 @@ import { ArrowUpCircle } from 'lucide-react';
 
 const HeroSection = () => {
   return (
-    <section className="max-w-4xl mx-auto text-center mt-32 flex flex-col justify-center">
-      <h1 className="text-6xl font-black leading-tight">
+    <section className="max-w-4xl mx-auto text-center mt-32 flex flex-col justify-center px-5 md:px-0">
+      <h1 className="text-3xl md:text-6xl font-black leading-tight">
         Elevate your code snippets with impressive visuals
       </h1>
-      <p className="mt-8 mx-32 text-muted-foreground text-base md:text-xl">
+      <p className="mt-8 md:mx-32 text-muted-foreground text-base md:text-xl">
         Effortlessly create and beautify your code snippets with TaaYoo Styles,
         making them eye-catching code showcases.
       </p>
