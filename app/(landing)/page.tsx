@@ -7,10 +7,18 @@ const DynamicHeroSection = dynamic(
   }
 );
 
+const DynamicEditorImage = dynamic(
+  () => import('@/components/landing/editor-image'),
+  {
+    ssr: false,
+  }
+);
+
 export default function LandingPage() {
   return (
     <main>
       <DynamicHeroSection />
+      <DynamicEditorImage />
     </main>
   );
 }
