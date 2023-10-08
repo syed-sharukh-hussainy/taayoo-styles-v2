@@ -16,7 +16,7 @@ const HeroSection = () => {
           href="/screenshot-editor"
           className="bg-primary w-fit py-3 px-6 flex items-center rounded-lg justify-center hover:bg-primary/90 transition-colors shadow-lg"
         >
-          <p className="text-primary-foreground">Get Started</p>
+          <span className="text-primary-foreground">Get Started</span>
           <ArrowUpCircle className="h-5 w-5 rotate-45 ml-4 group-hover:rotate-90 transition text-primary-foreground" />
         </Link>
       </section>
