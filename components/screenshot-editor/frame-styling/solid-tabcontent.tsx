@@ -16,10 +16,10 @@ const SolidTabContent = () => {
   };
   return (
     <TabsContent value="solid">
-      <div className="">
-        <div className="flex flex-wrap w-full justify-between gap-1">
+      <section>
+        <section className="flex flex-wrap w-full justify-between gap-1">
           {SOLID_COLORS.map((color, index) => (
-            <div
+            <section
               key={index}
               className="h-7 w-7 cursor-pointer rounded-full flex justify-center items-center"
               onClick={() => {
@@ -30,12 +30,12 @@ const SolidTabContent = () => {
               }}
             >
               {getGradientColor(selectedBackgroundColor) === `#${color}` && (
-                <div className="w-3 h-3 bg-background rounded-full"></div>
+                <section className="w-3 h-3 bg-background rounded-full"></section>
               )}
-            </div>
+            </section>
           ))}
-        </div>
-      </div>
+        </section>
+      </section>
     </TabsContent>
   );
 };

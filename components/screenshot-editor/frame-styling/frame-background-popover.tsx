@@ -12,15 +12,15 @@ import { Loader2 } from 'lucide-react';
 
 const BackgroundInput = dynamic(() => import('./background-input'), {
   ssr: false,
+});
+
+const GradientTabContent = dynamic(() => import('./gradient-tabcontent'), {
+  ssr: false,
   loading: () => (
     <section className="flex items-center justify-center animate-spin my-10">
       <Loader2 />
     </section>
   ),
-});
-
-const GradientTabContent = dynamic(() => import('./gradient-tabcontent'), {
-  ssr: false,
 });
 
 const SolidTabContent = dynamic(() => import('./solid-tabcontent'), {
