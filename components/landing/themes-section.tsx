@@ -23,7 +23,7 @@ const ThemesSection = () => {
 
   return (
     <section className="my-32 max-w-7xl mx-auto text-center">
-      <h3 className="text-2xl md:text-3xl font-bold max-w-2xl mx-auto mb-3">
+      <h3 className="text-2xl md:text-4xl font-bold max-w-2xl mx-auto mb-3">
         Customize Your Code Snippets
       </h3>
       <p className="text-muted-foreground text-sm md:text-base">
