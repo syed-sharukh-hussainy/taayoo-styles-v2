@@ -11,7 +11,7 @@ const EditorImage = () => {
       <section className="flex items-center justify-center bg-primary w-full max-w-7xl h-[250px] md:h-[700px] rounded-xl md:rounded-lg">
         {resolvedTheme ? (
           <Image
-            src={`https://ik.imagekit.io/x7lxfswax/${resolvedTheme}-editor-bg.webp`}
+            src={`https://taayoo-images.s3.ap-south-1.amazonaws.com/${resolvedTheme}-editor-bg.webp`}
             alt="screenshot-editor"
             width={900}
             height={900}
