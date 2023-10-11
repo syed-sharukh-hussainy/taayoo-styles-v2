@@ -1,25 +1,30 @@
 'use client';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import dynamic from 'next/dynamic';
 
 const MarqueeTheme = dynamic(() => import('../marquee-theme'));
 
 const ThemesSection = () => {
   const [images, setImages] = useState([]);
-  const fetchImage = async () => {
+  const fetchImage = useCallback(async () => {
     const res = await axios.get('/api/fetch-images');
-
     setImages(res.data.images);
-  };
+  }, []);
 
   useEffect(() => {
     fetchImage();
-  }, []);
+  }, [fetchImage]);
 
   const middleIndex = Math.ceil(images.length / 2);
-  const firstHalf = images.slice(0, middleIndex);
-  const secondHalf = images.slice(middleIndex);
+  const firstHalf = useMemo(
+    () => images.slice(0, middleIndex),
+    [images, middleIndex]
+  );
+  const secondHalf = useMemo(
+    () => images.slice(middleIndex),
+    [images, middleIndex]
+  );
 
   return (
     <section className="my-32 max-w-7xl mx-auto text-center">
