@@ -4,13 +4,13 @@ import dynamic from 'next/dynamic';
 const FrameStyling = dynamic(() => import('./frame-styling/frame-styling'), {
   ssr: false,
 });
-// const WindowStyling = dynamic(() => import('./window-styling/window-styling'), {
-//   ssr: false,
-// });
-// const EditorStyling = dynamic(() => import('./editor-styling/editor-styling'), {
-//   ssr: false,
-// });
-// const FormatButton = dynamic(() => import('./format-btn'), { ssr: false });
+const WindowStyling = dynamic(() => import('./window-styling/window-styling'), {
+  ssr: false,
+});
+const EditorStyling = dynamic(() => import('./editor-styling/editor-styling'), {
+  ssr: false,
+});
+const FormatButton = dynamic(() => import('../format-btn'), { ssr: false });
 
 const Sidebar = () => {
   return (
@@ -18,10 +18,10 @@ const Sidebar = () => {
       <section className="border h-full rounded-lg relative">
         <ScrollArea className=" w-full h-full rounded-lg pb-20">
           <FrameStyling />
-          {/* <WindowStyling /> */}
-          {/* <EditorStyling /> */}
+          <WindowStyling />
+          <EditorStyling />
         </ScrollArea>
-        {/* <FormatButton /> */}
+        <FormatButton />
       </section>
     </aside>
   );

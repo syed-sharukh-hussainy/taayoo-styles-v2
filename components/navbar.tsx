@@ -6,6 +6,15 @@ import { Button } from './ui/button';
 
 import TaaYooLogo from './taayoo-logo';
 import ModeToggle from './mode-toggle';
+import dynamic from 'next/dynamic';
+
+const ThemesSheet = dynamic(() => import('./themes-sheet'), { ssr: false });
+const ExportToImage = dynamic(() => import('./export-to-image'), {
+  ssr: false,
+});
+const ShareImage = dynamic(() => import('./share-image'), {
+  ssr: false,
+});
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -20,9 +29,9 @@ const Navbar = () => {
     } else {
       return (
         <section className="hidden md:flex items-center gap-3">
-          {/* <ThemesSheet /> */}
-          {/* <ExportToImage /> */}
-          {/* <ShareImage /> */}
+          <ThemesSheet />
+          <ExportToImage />
+          <ShareImage />
         </section>
       );
     }
@@ -35,10 +44,10 @@ const Navbar = () => {
           <TaaYooLogo />
           <span className="hidden md:flex font-black text-xl">TaaYoo</span>
         </Link>
-        <div className="flex items-center gap-3">
+        <section className="flex items-center gap-3">
           {NavButtons}
           <ModeToggle />
-        </div>
+        </section>
       </nav>
     </header>
   );

@@ -14,11 +14,25 @@ const DynamicEditorImage = dynamic(
   }
 );
 
+const DynamicFeatureSection = dynamic(
+  () => import('@/components/landing/features-section'),
+  {
+    ssr: false,
+  }
+);
+
+const DynamicThemesSection = dynamic(
+  () => import('@/components/landing/themes-section'),
+  { ssr: false }
+);
+
 export default function LandingPage() {
   return (
-    <main>
+    <>
       <DynamicHeroSection />
       <DynamicEditorImage />
-    </main>
+      <DynamicFeatureSection />
+      <DynamicThemesSection />
+    </>
   );
 }

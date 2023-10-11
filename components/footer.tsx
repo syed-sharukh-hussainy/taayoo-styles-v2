@@ -5,31 +5,25 @@ import { usePathname } from 'next/navigation';
 
 const Footer = () => {
   const pathName = usePathname();
-  if (pathName === '/' || pathName === 'cookies') {
+  if (pathName === '/' || pathName === '/cookies') {
     return (
       <footer className="border-t">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between py-10 px-5 md:px-0">
           <div className="flex flex-col items-start justify-center gap-5">
             <Link href="/" className="flex items-center gap-3">
               <TaaYooLogo />
-              <p className="text-lg font-black">TaaYoo Styles</p>
+              <span className="text-xl font-black">TaaYoo Styles</span>
             </Link>
-            <p className="max-w-sm text-sm">
+            <p className="max-w-sm">
               Effortlessly create and beautify your code snippets with TaaYoo
               Styles, making them eye-catching code showcases.
             </p>
           </div>
           <div className="flex flex-col mt-5 md:mt-0">
             <p className="text-lg font-bold mb-3">Legal</p>
-            <Link href="/" className="text-sm">
-              Terms & Conditions
-            </Link>
-            <Link href="/" className="text-sm">
-              Privacy Policy
-            </Link>
-            <Link href="/cookies" className="text-sm">
-              Cookie Prefences
-            </Link>
+            <Link href="/">Terms & Conditions</Link>
+            <Link href="/">Privacy Policy</Link>
+            <Link href="/cookies">Cookie Prefences</Link>
           </div>
         </div>
         <div className="text-sm py-6 bg-muted">
